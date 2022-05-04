@@ -9,10 +9,11 @@
 body {
     font-family: Lato, sans-serif;
     font-weight: 300;
-    color; #3a3a3a;
+    color: #3a3a3a;
 }
 
 /* headings and logos */
+
 h1, h2 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
@@ -20,4 +21,32 @@ h1, h2 {
     color: #252525;
 }
 #logo {float: left;
-        font: 280%;}
+        font: 280%;
+    }
+
+/* navigation links */
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+}  
+#menu, #logo {
+    line-height: 75%;
+
+}
+#menu li {
+   float: right;
+   list-style-type: none; 
+   margin-right: 30px;
+}      
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+#menu a:hover {
+    border-bottom: 1px solid #3a3a3a;
+    
+}
+.active { 
+    border-bottom: 1px solid #3a3a3a;
+}
