@@ -50,3 +50,31 @@ h1, h2 {
 .active { 
     border-bottom: 1px solid #3a3a3a;
 }
+#background-image {
+    height: 600px;
+    width: 100%;
+    background-image: url("../css/images/hero-image.webp");
+
+    /* animate zoom affect on loading page */
+    animation-name: background-image-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+
+}
+
+/* create the level of zoom for background image */
+
+@keyframes background-image-zoom {
+    from{
+        transform: scale(1);
+
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+#background-outer {
+    height: 600px;
+    width: 100%;  
+    overflow: hidden;
+}
