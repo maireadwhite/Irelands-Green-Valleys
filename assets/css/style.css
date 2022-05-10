@@ -12,7 +12,7 @@ body {
     color: #3a3a3a;
 }
 
-/* headings and logos */
+/* headings and logo */
 
 h1, h2 {
     font-family: Oswald, sans-serif;
@@ -20,46 +20,48 @@ h1, h2 {
     letter-spacing: 4px;
     color: #252525;
 }
-#logo {float: left;
-        font: 280%;
 
-        margin-left: 30px;
-        padding-bottom: 10px;
-        padding-top: 10px;
-    }
+#logo {
+    float: left;
+    font-size: 280%;
+    margin-left: 30px;
+}
 
 /* navigation links */
 
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
-    padding-top: 10px;
-}  
-#menu, #logo {
-    line-height: 75%;
-
 }
+
+#menu, #logo {
+    line-height: 75px;
+}
+
 #menu li {
-   float: right;
-   list-style-type: none; 
-   margin-right: 30px;
-}      
+    float: right;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
 #menu a {
     text-decoration: none;
     color: inherit;
 }
+
 #menu a:hover {
-    border-bottom: 1px solid #3a3a3a;
-    
-}
-.active { 
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* add background image and cover text*/
-#background-outer {
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* hero image and cover text */
+
+#hero-outer {
     height: 600px;
-    width: 100%;  
+    width: 100%;
     overflow: hidden;
 
     position: relative;
@@ -69,10 +71,31 @@ h1, h2 {
     color: #fff;
 }
 
+#hero-image {
+    height: 600px;
+    width: 100%;
+    background: url('../images/hero-image.webp') no-repeat center center;
+
+    /* animates zoom effect on loading page */
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* creates the level of zoom for hero image */
+@keyframes hero-zoom {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
 #cover-text {
     font-size: 130%;
     font-family: Oswald, sans-serif;
-    transform: uppercase;
+    text-transform: uppercase;
     letter-spacing: 4px;
 
     width: 300px;
@@ -81,57 +104,66 @@ h1, h2 {
     padding-top: 40px;
     padding-left: 10px;
 
-    background-color: rgba(241,109,107,0.7);
+    background-color: rgba(241, 109, 107, .7);
 
     bottom: 30px;
     right: 150px;
 
     position: absolute;
 }
-#background-image {
+
+/* club ethos */
+
+#club-ethos {
     height: 600px;
-    width: 100%;
-    background-image: url("../css/images/hero-image.webp");
-
-    /* animate zoom affect on loading page */
-    animation-name: background-image-zoom;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-
 }
 
-/* create the level of zoom for background image */
+#left-about {
+    padding-top: 30px;
+    width: 33%;
+    float: left;
+}
 
-@keyframes background-image-zoom {
-    from{
-        transform: scale(1);
+#right-about {
+    padding-top: 30px;
+    width: 33%;
+    float: right;
+    background-color: none;
+}
 
-    }
-    to{
-        transform: scale(1.1);
-    }
+#center-about {
+    width: 33%;
+    margin: 0 auto;
+    background-color: none;
+}
 
-    /* enviornmental help*/
+hr {
+    border-top: 1px solid #3a3a3a;
+    width: 100%;
+    margin: 5px 0;
+}
 
-    .environmental-help {
-        height: 600px;
-    }
-    .left-about {
-        padding-top: 30px;
-        width: 33%;
-        float: left;
-        background-color: white;
-    }
-    .right-about {
-        padding-top: 30px;
-        width: 30%;
-        float: right;
-        background-color: silver;
-    }
-    
-    .centre-about {
-        width: 33%;
-        margin: 0 auto;  /* centres the entire div*/
-        background-color: green;
-    }
+.left-about-heading {
+    width: 60%;
+    float: right;
+    line-height: 20px;
+    clear: both;
+    margin-bottom: 50px;
+}
 
+.right-about-heading {
+    width: 60%;
+    float: left;
+    line-height: 20px;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+.right-about-heading, h2 {
+    text-align: right;
+}
+ .right-about-heading, p {
+     text-align: right;
+ }
+
+   
