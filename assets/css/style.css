@@ -285,8 +285,8 @@ footer {
 
 /* for medium screens 950px and down */
 
-@media screen and {max-width: 950px;
-    #menu {
+@media screen and (max-width: 950px){
+    #m0enu {
         clear: left;
         float: left;
         margin-left: 30px;
